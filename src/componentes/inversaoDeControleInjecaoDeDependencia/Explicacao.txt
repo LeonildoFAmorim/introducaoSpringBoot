@@ -1,0 +1,11 @@
+A classe SalaryService depende das classes SalaryService e PensionService porém não é ela que
+instancia essas classes, nesse caso quem está fazendo isso e a classe Program, se precisar
+mudar a forma de como calcular o imposto basta criar essa nova classe da nova forma do
+imposto e dar o new dessa classe no programa principal sem precisar alterar nada SalaryService
+analogia: o motor do carro depende da bateria, mas quando é preciso trocar a bateria
+não é preciso fazer nada no  motor. Aqui o TaxService foi trocado no progrma principal pela
+ a classe BrazilTaxService (nova forma de cobrar imposto) sem ter
+que alterar nada nessa SalaryService. (trocou a dependência (classe TaxService pela a BrazilTaxService)
+ sem precisar mexer no componente (SalaryService). Sempre ficar em alerta quando tiver que instanciar uma
+ nova classe, novo serviço e por conta disso tiver que alterar código em outras classes, nesses caso colocar
+ em prática o conceito de inversão de controle injeção de dependência.
